@@ -2,6 +2,6 @@ from object_type import ObjectType
 from physical_object import PhysicalObject
 
 
-class Ball(PhysicalObject):
+class Wall(PhysicalObject):
     def object_type(self) -> ObjectType:
-        return ObjectType.BALL
+        return ObjectType.WALL
