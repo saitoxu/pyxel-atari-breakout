@@ -1,5 +1,5 @@
 # pyxel-breakout
 
 ```sh
-$ pyxel run atari_breakout/app.py
+$ pyxel run breakout/app.py
 ```
