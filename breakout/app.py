@@ -4,7 +4,7 @@ from config import Config
 
 class App:
     def __init__(self):
-        pyxel.init(Config.WIDTH, Config.HEIGHT, title="Atari Breakout")
+        pyxel.init(Config.WIDTH, Config.HEIGHT, title="Breakout")
         self.x = 0
         pyxel.run(self.update, self.draw)
 

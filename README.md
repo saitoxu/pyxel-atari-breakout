@@ -1,1 +1,1 @@
-# pyxel-atari-breakout
+# pyxel-breakout
