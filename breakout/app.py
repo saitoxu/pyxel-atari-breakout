@@ -1,21 +1,23 @@
 import pyxel
 from config import Config
+from paddle import Paddle
 
 
 class App:
     def __init__(self):
-        pyxel.init(Config.width, Config.height, title="Atari Breakout")
-        self.x = 0
+        pyxel.init(Config.WIDTH, Config.HEIGHT, title="Breakout")
+        self._paddle = Paddle()
         pyxel.run(self.update, self.draw)
 
     def update(self):
         if pyxel.btnp(pyxel.KEY_Q):
             pyxel.quit()
-        self.x = (self.x + 1) % pyxel.width
+            return
+        self._paddle.update()
 
     def draw(self):
         pyxel.cls(0)
-        pyxel.rect(self.x, 0, 8, 8, 9)
+        self._paddle.draw()
 
 
 App()
