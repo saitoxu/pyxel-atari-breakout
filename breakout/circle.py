@@ -26,7 +26,7 @@ class Circle:
         self._shape = Shape.CIRCLE
         self._color = color
         self._velocity = Vector(
-            random.randint(-20.0, 20.0), random.randint(-20.0, 20.0)
+            random.randint(-20, 20), random.randint(-20, 20)
         )
 
     def move(self, dx: float, dy: float) -> None:
