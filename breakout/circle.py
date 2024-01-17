@@ -75,7 +75,7 @@ class Circle:
         v2 = Vector(line._x1 - line._x0, line._y1 - line._y0)
         cv1v2 = v1.cross(v2)
         if cv1v2 == 0:
-            cv1v2 = 10e-10
+            return
         t1 = v0.cross(v1) / cv1v2
         t2 = v0.cross(v2) / cv1v2
         crossed = (0 <= t1 and t1 <= 1) and (0 <= t2 and t2 <= 1)

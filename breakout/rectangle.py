@@ -1,3 +1,4 @@
+import pyxel
 from shape import Shape
 
 
@@ -20,3 +21,6 @@ class Rectangle:
             and self._y <= y
             and y <= self._y + self._height
         )
+
+    def draw(self) -> None:
+        pyxel.rect(self._x, self._y, self._width, self._height, self._color)
