@@ -19,3 +19,6 @@ class Vector:
     def move(self, dx: float, dy: float) -> None:
         self.x += dx
         self.y += dy
+
+    def __str__(self) -> str:
+        return f"Vector({self.x}, {self.y})"

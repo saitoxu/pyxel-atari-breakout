@@ -1,4 +1,5 @@
 import pyxel
+from line import Line
 from shape import Shape
 
 
@@ -12,15 +13,13 @@ class Rectangle:
         self._height = height
         self._color = color
         self._shape = Shape.RECTANGLE
+        self._lines = [
+            Line(x, y, x + width, y),
+            Line(x + width, y, x + width, y + height),
+            Line(x + width, y + height, x, y + height),
+            Line(x, y + height, x, y),
+        ]
         self._deceleration = 0.0
-
-    def is_hit(self, x: float, y: float) -> bool:
-        return (
-            self._x <= x
-            and x <= self._x + self._width
-            and self._y <= y
-            and y <= self._y + self._height
-        )
 
     def draw(self) -> None:
         pyxel.rect(self._x, self._y, self._width, self._height, self._color)
